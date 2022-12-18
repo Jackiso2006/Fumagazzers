@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+   <meta charset="UTF-8">
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bellezze collaterali</title>
+   <link rel="icon" href="/img/logo beta.png" type="image/png" sizes="16x16">
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="pagina">
+   <header style="background-color: rgb(90, 4, 4); width: 100%;">
+      <div id="menu">
+         <nav>
+            <center>
+               <ul>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="orologi.html">OPULENTI</a></li>
+               </ul>
+            </center>
+         </nav>
+      </div>
+   </header>
+   <div class="countdown-timer-container">
+      <div class="countdown-timer-values" id="days">00</div>
+      <div>Giorni</div>
+      <div class="countdown-timer-values" id="hours">00</div>
+      <div>Ore</div>
+      <div class="countdown-timer-values" id="minutes">00</div>
+      <div>Minuti</div>
+      <div class="countdown-timer-values" id="seconds">00</div>
+      <div>Secondi</div>
+   </div>
+   <div id="newOpulento">
+      <center>
+         <img src="./img/fameOlioSuTela.gif" width="250px">
+         <div style="padding-top: 50px; margin: 3%;">
+            <h1>FAME - OLIO SU TELA - 1372</h1> <br>
+            <p style="text-align: center;">
+               Prima dell'era dei primi uomini, quando l'obiettivo era uno solo sopravvivere, i pittori immortalavano
+               momenti di stento, ricerca di cibo e sconsolazione.
+               Sguardi del genere erano all'ordine del giorno: mangiare il proprio pasto pensando a come rubare il pasto
+               altrui.
+               Solo il più forte sopravvive e merita di essere immortalato in quest'opulento coloratissimo
+            </p>
+         </div>
+      </center>
+   </div>
+   <script>
+      $(document).ready(function () {
+         $("#newOpulento").hide();
+      });
+
+      var pag = document.getElementById('pagina');
+      function cambiaSfondo() {
+         var body = document.getElementsById("pagina");
+         body.style.backgroundColor = "white";
+      }
+
+      var countDownDate = new Date("Dec 19, 2022 13:00:00").getTime();
+      const daysValue = document.querySelector("#days");
+      const hoursValue = document.querySelector("#hours");
+      const minutesValue = document.querySelector("#minutes");
+      const secondsValue = document.querySelector("#seconds");
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+
+         // Get today's date and time
+         var now = new Date().getTime();
+
+         // Find the distance between now and the count down date
+         var distance = countDownDate - now;
+
+         // Time calculations for days, hours, minutes and seconds
+         daysValue.innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
+         hoursValue.innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         minutesValue.innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+         secondsValue.innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
+
+         if (distance < 0) {
+            clearInterval(x);
+            window.onload = cambiaSfondo;
+            $("#newOpulento").show();
+            $(".countdown-timer-container").hide();
+         }
+      }, 1000);
+   </script>
+</body>
+</html>
