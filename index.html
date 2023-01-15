@@ -8,38 +8,40 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Bellezze collaterali</title>
    <link rel="icon" href="/img/logo beta.png" type="image/png" sizes="16x16">
-   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./css/style.css" media="screen and (min-width: 770px)">
+   <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width: 769px)">
 </head>
 
-<body id="pagina">
-   <header style="background-color: rgb(90, 4, 4); width: 100%;">
-      <div id="menu">
-         <nav>
-            <center>
-               <ul>
-                  <li><a href="index.html">HOME</a></li>
-                  <li><a href="orologi.html">OPULENTI</a></li>
-               </ul>
-            </center>
-         </nav>
-      </div>
-   </header>
+<body>
+   <header>
+      <nav id="menu">
+          <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="orologi.html">OPULENTI</a></li>
+          </ul>
+      </nav>
+  </header>
+
    <div class="countdown-timer-container">
-      <div class="countdown-timer-values" id="days">00</div>
-      <div>Giorni</div>
-      <div class="countdown-timer-values" id="hours">00</div>
-      <div>Ore</div>
-      <div class="countdown-timer-values" id="minutes">00</div>
-      <div>Minuti</div>
-      <div class="countdown-timer-values" id="seconds">00</div>
-      <div>Secondi</div>
+      <div>
+         <div id="days">00</div>
+         <div id="hours">00</div>
+         <div id="minutes">00</div>
+         <div id="seconds">00</div>
+      </div>
+      <div>
+         <span>Giorni</span>
+         <span>Ore</span>
+         <span>Minuti</span>
+         <span>Secondi</span>
+      </div>
+      
    </div>
    <div id="newOpulento">
-      <center>
-         <img src="./img/leoGiorgia1anno.gif" width="250px">
-         <div style="padding-top: 50px; margin: 3%;">
-            <h1>1 + 1 NON HA MAI FATTO 2</h1> <br>
-            <p style="text-align: center;">
+         <img src="./img/leoGiorgia1anno.gif">
+         <div>
+            <h1>1 + 1 NON HA MAI FATTO 2</h1>
+            <p>
                Al primo anniversario di matrimonio anticamente veniva regalata la carta simbolo di spazio, tempo davanti
                da riempire insieme e da lì colorare il mondo attorno in un'unica tela, oggi giorno i tempi sono cambiati
                ed il regalo indicato per un anno insieme sono gli orologi, coincidenze?!
@@ -48,13 +50,10 @@
                Un opulento questa settimana non per dimostrare la stima che abbiamo per questi due piccioni (ma
                soprattutto per ricordare a Leo degli auguri a quella splendida ragazza di Giò, che ricordiamo essere,
                insieme a Paco, una delle migliori realizza video🙌🏻)
-               Auguri fratellì🫶🏻
-               In tanti guanciottissimi colori❣
+               Auguri fratellì! In tanti guanciottissimi colori❣ <br>
                P.s. vietati posti per andare a festeggiare stasera: Mac, Kebby, pizza al taglio dove lavora il biondo🥰
-
             </p>
          </div>
-      </center>
    </div>
    <script>
       $(document).ready(function () {
@@ -67,7 +66,7 @@
          body.style.backgroundColor = "white";
       }
 
-      var countDownDate = new Date("Jan 9, 2023 13:00:00").getTime();
+      var countDownDate = new Date("Jan 16, 2023 13:00:00").getTime();
       const daysValue = document.querySelector("#days");
       const hoursValue = document.querySelector("#hours");
       const minutesValue = document.querySelector("#minutes");
