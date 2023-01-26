@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Opulenti</title>
-   <link rel="icon" href="/img/logo beta.png" type="image/png" sizes="16x16">
-   <link rel="stylesheet" href="./css/style.css" media="screen and (min-width: 770px)">
-   <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width: 769px)">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opulenti</title>
+    <link rel="icon" href="/img/logo beta.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="./css/style.css" media="screen and (min-width: 770px)">
+    <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width: 769px)">
 </head>
 
 <body>
@@ -20,6 +20,9 @@
                 <li><a href="orologi.html">OPULENTI</a></li>
             </ul>
         </nav>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
     </header>
 
     <a href="#fine" id="frecciaGiu"><img src="./img/upload.png"></a>
@@ -30,7 +33,7 @@
         <img src="img/numeroUno.jpg">
         <div>
             <h1>LA NUMERO UNO</h1>
-            <p>Descrizione gioiello: <br> 
+            <p>Descrizione gioiello: <br>
                 Non sai come essere felice? Un fumagazzi e un formaggio eliminano il problema alla
                 radice. <br>
                 Proprio come Paperon De Paperoni anche noi Fumagazzers abbiamo la nostra NUMERO UNO
@@ -260,7 +263,8 @@
             <h1>MADÖI SE DIVENTA GRANDE</h1>
             <p>Descrizione gioiello: <br>
                 Il tempo scorre e per Silvis è arrivato il fatidico giorno dei 18. Non può che essere felice, la sua
-                vita da oggi cambierà TOTALMENTE. E poi chi è che riceve come regalo un fumagazzi?! SOLAMENTE LEI, la Silvia
+                vita da oggi cambierà TOTALMENTE. E poi chi è che riceve come regalo un fumagazzi?! SOLAMENTE LEI, la
+                Silvia
                 di cui tutti avrebbero bisogno nella vita, proprio quella per cui esclameresti: madöi che madöi, per
                 fortuna c'è Silvia.
                 E allora non possiamo che ringraziare della sua esistenza creando un orologio in suo onore
@@ -472,18 +476,30 @@
         <div>
             <h1>1 + 1 NON HA MAI FATTO 2</h1>
             <p>Descrizione gioiello: <br>
-                Al primo anniversario di matrimonio anticamente veniva regalata la carta simbolo di spazio, tempo davanti
-               da riempire insieme e da lì colorare il mondo attorno in un'unica tela, oggi giorno i tempi sono cambiati
-               ed il regalo indicato per un anno insieme sono gli orologi, coincidenze?!
-               Quando due astri si scontrano (o come sarebbe meglio dire, fondono insieme i loro nuclei) vi é subito un
-               grande caos, ma a seguire una luce diversa, cambiata e più intensa.
-               Un opulento questa settimana non per dimostrare la stima che abbiamo per questi due piccioni (ma
-               soprattutto per ricordare a Leo degli auguri a quella splendida ragazza di Giò, che ricordiamo essere,
-               insieme a Paco, una delle migliori realizza video🙌🏻)
-               Auguri fratellì! In tanti guanciottissimi colori❣ <br>
-               P.s. vietati posti per andare a festeggiare stasera: Mac, Kebby, pizza al taglio dove lavora il biondo🥰
+                Al primo anniversario di matrimonio anticamente veniva regalata la carta simbolo di spazio, tempo
+                davanti
+                da riempire insieme e da lì colorare il mondo attorno in un'unica tela, oggi giorno i tempi sono
+                cambiati
+                ed il regalo indicato per un anno insieme sono gli orologi, coincidenze?!
+                Quando due astri si scontrano (o come sarebbe meglio dire, fondono insieme i loro nuclei) vi é subito un
+                grande caos, ma a seguire una luce diversa, cambiata e più intensa.
+                Un opulento questa settimana non per dimostrare la stima che abbiamo per questi due piccioni (ma
+                soprattutto per ricordare a Leo degli auguri a quella splendida ragazza di Giò, che ricordiamo essere,
+                insieme a Paco, una delle migliori realizza video🙌🏻)
+                Auguri fratellì! In tanti guanciottissimi colori❣ <br>
+                P.s. vietati posti per andare a festeggiare stasera: Mac, Kebby, pizza al taglio dove lavora il biondo🥰
             </p>
         </div>
     </div>
     <div id="fine"></div>
+    <script>
+        window.onscroll = function() {scrollbar()};
+
+        function scrollbar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
 </body>
