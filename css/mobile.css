@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Microsoft YaHei;
+    background-color: white;
+}
+
+
+header{
+    background-color: rgb(90, 4, 4); 
+    width: 100%; 
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+li a {
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 250, 250);
+    height: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+li a:hover {
+    background-color: rgb(73, 2, 2);
+    color: white;
+}
+
+.countdown-timer-container {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.countdown-timer-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-size: 30px;
+}
+
+.countdown-timer-container > div > div {
+    font-size: 60px !important;
+}
+
+#newOpulento, .opulenti{
+    color:  rgb(90, 4, 4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 5%;
+    gap: 25px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#newOpulento > img, .opulenti > img{
+    width: 250px;
+    height: auto;
+}
+
+#newOpulento > div, .opulenti > img{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.opulenti > img{
+    border-radius: 15px;
+    border: 15px solid rgb(90, 4, 4);
+    margin: auto;
+}
+
+#frecciaGiu{
+    position: fixed;
+    height: 20px;
+    right: 5%;
+    top: 95%;
+    rotate: 180deg;
+    width: 20px;
+    height: auto;
+}
+
+#frecciaSu{
+    position: fixed;
+    height: 20px;
+    right: 5%;
+    top: 90%;
+    width: 20px;
+    height: auto;
+}
+
+#frecciaGiu > img, #frecciaSu > img{
+    width: 20px;
+    height: auto;
+}
+
+.progress-container {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 8px;
+    background: transparent;
+}
+  
+.progress-bar {
+    height: 8px;
+    background: rgb(90, 4, 4);
+    width: 0%;
+}
