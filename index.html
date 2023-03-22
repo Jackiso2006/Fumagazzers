@@ -10,9 +10,10 @@
    <link rel="icon" href="/img/logo beta.png" type="image/png" sizes="16x16">
    <link rel="stylesheet" href="./css/style.css" media="screen and (min-width: 770px)">
    <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width: 769px)">
+   <script src="./JS/script.js"></script>
 </head>
 
-<body>
+<body onload="init()">
    <header>
       <nav id="menu">
          <ul>
@@ -38,59 +39,22 @@
 
    </div>
    <div id="newOpulento">
-      <img src="./img/ChiTrovaUnAmicoTrovaUnTREASURE.gif">
+      <img src="./img/ScalataDIPranzo.gif">
       <div>
-         <h1>CHI TROVA UN AMICO TROVA UN TREASURE</h1>
+         <h1>LA SCALATA DI PRANZO</h1>
          <p>
-            Come diceva quel famoso motivetto "solo puffin ti darà forza e grinta a volontà" proprio noi traiamo la
-            forza dall'essenza delle cose, come i treasure, piccoli e indifesi da fuori ma con un cuore dolce (quasi da
-            diabete mangiandone più di 5 per volta) e con una sorpresa che anche lì i creatori hanno pensato in modo di
-            tenere le menti dei più famosi scienziati allenate con la loro difficoltà.
-            Per cui non vedetelo come un gelato, ma un'esperienza di vita estrasensoriale in due soli coloretti edizione
-            limitata (anche se ci si chiede chi sia a capo in algida che continua a produrli)
+            Prima si, poi no, poi sembra quasi e poi no, e poi ti metti a ridere delle disgrazie altrui, la vita in
+            fondo é così, un provarci continuo, e il più delle volte non ci riusciamo, ma ci riproviamo e non ci
+            riusciamo e ci riproviamo una vita e non ci riusciamo ancora e magari qualcuno ride di noi, ma la vera
+            ragione non é arrivare in cima, ma non smettere di renderci ridicoli continuando a provare, perché la vita é
+            ignoranza, é errori, sbagli, risate, é patatine alle 11 e mezza di sera, sono torcetti con patatine alla
+            paprika proprio quando non hai più fame, sono il maestro che si lamenta alle 3 di notte della vicinanza alla
+            birra a onu, sono uno scendere prima dal campo più bello di tutti per poi ritornarci all'insaputa di tutti a
+            distanza di qualche mese, la vita è IGNORANZA, e celebriamola questa cosa, perché preoccuparsi di tutto non
+            risolve davvero i problemi in tanti colorirrimi colorelli
          </p>
       </div>
    </div>
-   <script>
-      $(document).ready(function () {
-         $("#newOpulento").hide();
-      });
-
-      var pag = document.getElementById('pagina');
-      function cambiaSfondo() {
-         var body = document.getElementsById("pagina");
-         body.style.backgroundColor = "white";
-      }
-
-      var countDownDate = new Date("Mar 20, 2023 13:00:00").getTime();
-      const daysValue = document.querySelector("#days");
-      const hoursValue = document.querySelector("#hours");
-      const minutesValue = document.querySelector("#minutes");
-      const secondsValue = document.querySelector("#seconds");
-
-      // Update the count down every 1 second
-      var x = setInterval(function () {
-
-         // Get today's date and time
-         var now = new Date().getTime();
-
-         // Find the distance between now and the count down date
-         var distance = countDownDate - now;
-
-         // Time calculations for days, hours, minutes and seconds
-         daysValue.innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
-         hoursValue.innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-         minutesValue.innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-         secondsValue.innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
-
-         if (distance < 0) {
-            clearInterval(x);
-            window.onload = cambiaSfondo;
-            $("#newOpulento").show();
-            $(".countdown-timer-container").hide();
-         }
-      }, 1000);
-   </script>
 </body>
 
 </html>

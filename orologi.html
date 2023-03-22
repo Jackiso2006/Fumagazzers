@@ -10,9 +10,10 @@
     <link rel="icon" href="/img/logo beta.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="./css/style.css" media="screen and (min-width: 770px)">
     <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width: 769px)">
+    <script src="./JS/script.js"></script>
 </head>
 
-<body>
+<body onload="initOrologi()">
     <header>
         <nav id="menu">
             <ul>
@@ -613,15 +614,19 @@
          </p>
       </div>
     </div>
+    <div class="opulenti">
+        <img src="./img/ChiTrovaUnAmicoTrovaUnTREASURE.gif">
+        <div>
+         <h1>CHI TROVA UN AMICO TROVA UN TREASURE</h1>
+         <p>
+            Come diceva quel famoso motivetto "solo puffin ti darà forza e grinta a volontà" proprio noi traiamo la
+            forza dall'essenza delle cose, come i treasure, piccoli e indifesi da fuori ma con un cuore dolce (quasi da
+            diabete mangiandone più di 5 per volta) e con una sorpresa che anche lì i creatori hanno pensato in modo di
+            tenere le menti dei più famosi scienziati allenate con la loro difficoltà. <br>
+            Per cui non vedetelo come un gelato, ma un'esperienza di vita estrasensoriale in due soli coloretti edizione
+            limitata (anche se ci si chiede chi sia a capo in algida che continua a produrli)
+         </p>
+      </div>
+    </div>
     <div id="fine"></div>
-    <script>
-        window.onscroll = function () { scrollbar() };
-
-        function scrollbar() {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            document.getElementById("myBar").style.width = scrolled + "%";
-        }
-    </script>
 </body>
