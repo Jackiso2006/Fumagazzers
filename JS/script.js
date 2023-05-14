@@ -9,7 +9,7 @@ function init(){
         body.style.backgroundColor = "white";
      }
 
-     var countDownDate = new Date("Apr 24, 2023 13:00:00").getTime();
+     var countDownDate = new Date("May 15, 2023 13:00:00").getTime();
      const daysValue = document.querySelector("#days");
      const hoursValue = document.querySelector("#hours");
      const minutesValue = document.querySelector("#minutes");
