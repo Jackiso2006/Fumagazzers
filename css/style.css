@@ -96,6 +96,11 @@ li a:hover {
     height: auto;
 }
 
+#newOpulento > video{
+    width: 70vw;
+    height: auto;
+}
+
 #newOpulento > div, .opulenti > div{
     height: 100%;
     display: flex;
