@@ -8,7 +8,7 @@ window.onload = () => {
 
    function updateCountdown() {
       // Find the distance between now and the count down date
-      let distance = new Date("Jan 14, 2024 22:00:00").getTime() - new Date().getTime();
+      let distance = new Date("Apr 24, 2025 22:00:00").getTime() - new Date().getTime();
 
       // Time calculations for days, hours, minutes, and seconds
       daysValue.innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
